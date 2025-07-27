@@ -12,7 +12,7 @@ namespace ExaminationSystem
 
             Subject subject = Helper.ChooseSubject();
 
-            Exam exam = subject.CreateExam();
+            subject.Exam = subject.CreateExam();
 
             char choice;
             do
@@ -23,7 +23,7 @@ namespace ExaminationSystem
             Console.Clear();
 
             if (choice == 'y')
-                exam.ShowExam();
+                subject.Exam.ShowExam();
             else
                 return;
         }
